@@ -1,0 +1,61 @@
+Exercícios
+
+01. Exibir mensagens usando print().
+
+02. Criar variáveis (nome, idade, cidade) e exibi-las.
+
+03. Ler o nome com input() e dar boas-vindas.
+
+04. Ler nome, bairro e cidade e montar uma frase.
+
+05. Ler idade, converter para int e exibir.
+
+06. Ler nome e idade, calcular a idade do próximo ano.
+
+07. Ler um número inteiro e mostrar seu dobro.
+
+08. Verificar se a pessoa é maior de idade.
+
+09. Verificar se um número é positivo.
+
+10. Verificar se uma pessoa pode entrar em um evento (idade ≥ 16).
+
+11. Verificar aprovação pela nota (nota ≥ 7).
+
+12. Verificar se o saldo é suficiente para uma compra.
+
+13. Aprovação considerando nota e frequência (and).
+
+14. Verificar entrada gratuita por idade (or).
+
+15. Fazer um login simples (usuário e senha).
+
+16. Mostrar uma mensagem 5 vezes usando while.
+
+17. Mostrar os números pares de 2 até 20.
+
+18. Repetir uma mensagem a quantidade informada pelo usuário.
+
+19. Somar os números de 1 até N.
+
+20. Pedir a senha até acertar.
+
+21. Criar um menu simples com while.
+
+22. Exibir a tabuada de um número.
+
+23. Somar números até o usuário digitar 0.
+
+24. Contar quantos números positivos foram digitados.
+
+25. Ler 5 números e mostrar o maior.
+
+26. Ler 4 notas e calcular a média.
+
+27. Login com no máximo 3 tentativas.
+
+28. Validar uma idade entre 0 e 120.
+
+29. Jogo de adivinhar um número secreto.
+
+30. Criar um menu de operações (somar, subtrair e multiplicar) usando while.
