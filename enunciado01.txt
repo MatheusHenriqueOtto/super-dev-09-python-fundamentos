@@ -1,61 +1,426 @@
-Exercícios
+"""
+==================================================
+EXERCÍCIOS DE PYTHON
+==================================================
 
-01. Exibir mensagens usando print().
+Orientações gerais:
+- Criar os arquivos solicitados.
+- Criar uma função para cada exercício.
+- Utilizar exatamente o nome da função indicado no enunciado.
+- Testar uma função por vez, chamando a função no final do arquivo.
 
-02. Criar variáveis (nome, idade, cidade) e exibi-las.
 
-03. Ler o nome com input() e dar boas-vindas.
+==================================================
+ARQUIVO: exercicios_for.py
+==================================================
 
-04. Ler nome, bairro e cidade e montar uma frase.
 
-05. Ler idade, converter para int e exibir.
+--------------------------------------------------
+Ex.1 - Repetindo uma mensagem
+--------------------------------------------------
 
-06. Ler nome e idade, calcular a idade do próximo ano.
+Função:
+exercicio01
 
-07. Ler um número inteiro e mostrar seu dobro.
+Objetivo:
+Apresentar o texto "Bem vindo" 5 vezes.
 
-08. Verificar se a pessoa é maior de idade.
+Regras:
+- Utilizar for
+- Não utilizar vetor/lista
 
-09. Verificar se um número é positivo.
+Exemplo de saída:
+Bem vindo
+Bem vindo
+Bem vindo
+Bem vindo
+Bem vindo
 
-10. Verificar se uma pessoa pode entrar em um evento (idade ≥ 16).
 
-11. Verificar aprovação pela nota (nota ≥ 7).
+--------------------------------------------------
+Ex.2 - Apresentando números
+--------------------------------------------------
 
-12. Verificar se o saldo é suficiente para uma compra.
+Função:
+exercicio02
 
-13. Aprovação considerando nota e frequência (and).
+Objetivo:
+Apresentar os números de 15 até 30.
 
-14. Verificar entrada gratuita por idade (or).
+Regras:
+- Utilizar for
+- Não utilizar vetor/lista
 
-15. Fazer um login simples (usuário e senha).
+Exemplo de saída:
+15
+16
+17
+...
+30
 
-16. Mostrar uma mensagem 5 vezes usando while.
 
-17. Mostrar os números pares de 2 até 20.
+--------------------------------------------------
+Ex.3 - Tabuada
+--------------------------------------------------
 
-18. Repetir uma mensagem a quantidade informada pelo usuário.
+Função:
+exercicio03
 
-19. Somar os números de 1 até N.
+Objetivo:
+Solicitar um número inteiro para o usuário e apresentar a tabuada deste número de 1 até 10.
 
-20. Pedir a senha até acertar.
+Regras:
+- Utilizar input
+- Converter o valor digitado para int
+- Utilizar for
+- Não utilizar vetor/lista
 
-21. Criar um menu simples com while.
+Exemplo:
+Digite um número: 5
 
-22. Exibir a tabuada de um número.
+Saída esperada:
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+...
+5 x 10 = 50
 
-23. Somar números até o usuário digitar 0.
 
-24. Contar quantos números positivos foram digitados.
+--------------------------------------------------
+Ex.4 - Soma de números
+--------------------------------------------------
 
-25. Ler 5 números e mostrar o maior.
+Função:
+exercicio04
 
-26. Ler 4 notas e calcular a média.
+Objetivo:
+Solicitar 5 números inteiros para o usuário e apresentar a soma total.
 
-27. Login com no máximo 3 tentativas.
+Regras:
+- Utilizar input
+- Converter cada valor digitado para int
+- Utilizar for
+- Não utilizar vetor/lista
 
-28. Validar uma idade entre 0 e 120.
+Exemplo:
+Digite o 1º número: 10
+Digite o 2º número: 5
+Digite o 3º número: 8
+Digite o 4º número: 2
+Digite o 5º número: 1
 
-29. Jogo de adivinhar um número secreto.
+Saída esperada:
+Soma total: 26
 
-30. Criar um menu de operações (somar, subtrair e multiplicar) usando while.
+
+
+==================================================
+ARQUIVO: exercicios_vetores.py
+==================================================
+
+
+--------------------------------------------------
+Ex.5 - Criando um vetor com dados fixos
+--------------------------------------------------
+
+Função:
+exercicio05
+
+Objetivo:
+Criar um vetor chamado nomes e adicionar 4 nomes fixos, escritos diretamente no código.
+
+Regras:
+- Criar um vetor vazio chamado nomes
+- Adicionar os nomes utilizando append
+- Não utilizar for
+- Apresentar o vetor completo no final
+
+Exemplo:
+nomes = []
+nomes.append("Ana")
+nomes.append("Carlos")
+nomes.append("Maria")
+nomes.append("João")
+
+Saída esperada:
+["Ana", "Carlos", "Maria", "João"]
+
+
+--------------------------------------------------
+Ex.6 - Criando um vetor com frutas
+--------------------------------------------------
+
+Função:
+exercicio06
+
+Objetivo:
+Solicitar 3 frutas para o usuário e armazenar cada uma dentro de um vetor chamado frutas.
+
+Regras:
+- Criar um vetor vazio chamado frutas
+- Utilizar input para solicitar as frutas
+- Adicionar cada fruta no vetor utilizando append
+- Não utilizar for
+- Apresentar o vetor completo no final
+
+Exemplo:
+Digite a primeira fruta: Banana
+Digite a segunda fruta: Maçã
+Digite a terceira fruta: Uva
+
+Saída esperada:
+["Banana", "Maçã", "Uva"]
+
+
+--------------------------------------------------
+Ex.7 - Criando um vetor com números
+--------------------------------------------------
+
+Função:
+exercicio07
+
+Objetivo:
+Solicitar 4 números inteiros para o usuário e armazenar cada número dentro de um vetor chamado numeros.
+
+Regras:
+- Criar um vetor vazio chamado numeros
+- Utilizar input para solicitar os números
+- Converter cada valor digitado para int
+- Adicionar cada número no vetor utilizando append
+- Não utilizar for
+- Apresentar o vetor completo no final
+
+Exemplo:
+Digite o primeiro número: 10
+Digite o segundo número: 5
+Digite o terceiro número: 8
+Digite o quarto número: 2
+
+Saída esperada:
+[10, 5, 8, 2]
+
+
+--------------------------------------------------
+Ex.8 - Manipulando um vetor de notas
+--------------------------------------------------
+
+Função:
+exercicio08
+
+Objetivo:
+Criar um vetor chamado notas, solicitar 4 notas para o usuário e depois realizar operações com esse vetor.
+
+Regras:
+- Criar um vetor vazio chamado notas
+- Utilizar input para solicitar as notas
+- Converter cada nota digitada para float
+- Adicionar cada nota no vetor utilizando append
+- Não utilizar for
+
+Depois de preencher o vetor, o programa deverá:
+
+1. Apresentar o vetor completo
+2. Apresentar a primeira nota digitada
+3. Apresentar a última nota digitada
+4. Alterar a segunda nota para 10
+5. Remover a terceira nota do vetor
+6. Apresentar o tamanho final do vetor
+7. Calcular a média das notas que ficaram no vetor
+8. Apresentar o vetor final
+9. Apresentar a média final
+
+Exemplo:
+Digite a primeira nota: 8
+Digite a segunda nota: 6
+Digite a terceira nota: 7
+Digite a quarta nota: 9
+
+Saída esperada:
+Vetor original: [8.0, 6.0, 7.0, 9.0]
+Primeira nota: 8.0
+Última nota: 9.0
+Vetor final: [8.0, 10.0, 9.0]
+Tamanho final: 3
+Média final: 9.0
+
+==================================================
+EXERCÍCIOS DE PYTHON - FOR COM VETOR
+==================================================
+
+Arquivo:
+exercicios_for_vetores.py
+
+Orientações gerais:
+- Criar uma função para cada exercício.
+- Utilizar exatamente o nome da função indicado.
+- Utilizar vetor/lista.
+- Utilizar for.
+- Não utilizar while.
+- Testar uma função por vez, chamando a função no final do arquivo.
+
+
+
+--------------------------------------------------
+Ex.9 - Percorrendo um vetor de nomes
+--------------------------------------------------
+
+Função:
+exercicio09
+
+Objetivo:
+Criar um vetor chamado nomes com 5 nomes fixos e apresentar cada nome utilizando for.
+
+Regras:
+- Criar o vetor com dados escritos diretamente no código
+- Utilizar for para percorrer o vetor
+- Apresentar um nome por linha
+
+Exemplo de vetor:
+nomes = ["Ana", "Carlos", "Maria", "João", "Pedro"]
+
+Saída esperada:
+Ana
+Carlos
+Maria
+João
+Pedro
+
+
+
+--------------------------------------------------
+Ex.10 - Cadastrando frutas em um vetor
+--------------------------------------------------
+
+Função:
+exercicio10
+
+Objetivo:
+Solicitar 5 frutas para o usuário, armazenar dentro de um vetor e depois apresentar todas as frutas cadastradas.
+
+Regras:
+- Criar um vetor vazio chamado frutas
+- Utilizar for para solicitar as 5 frutas
+- Utilizar append para adicionar cada fruta no vetor
+- Utilizar outro for para apresentar as frutas cadastradas
+
+Exemplo:
+Digite uma fruta: Banana
+Digite uma fruta: Maçã
+Digite uma fruta: Uva
+Digite uma fruta: Laranja
+Digite uma fruta: Melancia
+
+Saída esperada:
+Frutas cadastradas:
+Banana
+Maçã
+Uva
+Laranja
+Melancia
+
+
+
+--------------------------------------------------
+Ex.11 - Somando números de um vetor
+--------------------------------------------------
+
+Função:
+exercicio11
+
+Objetivo:
+Solicitar 5 números inteiros para o usuário, armazenar dentro de um vetor e apresentar a soma total.
+
+Regras:
+- Criar um vetor vazio chamado numeros
+- Utilizar for para solicitar os 5 números
+- Converter cada valor digitado para int
+- Adicionar cada número no vetor
+- Utilizar outro for para somar os valores do vetor
+- Apresentar o vetor completo
+- Apresentar a soma total
+
+Exemplo:
+Digite um número: 10
+Digite um número: 5
+Digite um número: 8
+Digite um número: 2
+Digite um número: 1
+
+Saída esperada:
+Números digitados: [10, 5, 8, 2, 1]
+Soma total: 26
+
+
+
+--------------------------------------------------
+Ex.12 - Contando números pares
+--------------------------------------------------
+
+Função:
+exercicio12
+
+Objetivo:
+Solicitar 6 números inteiros para o usuário, armazenar dentro de um vetor e contar quantos números pares foram digitados.
+
+Regras:
+- Criar um vetor vazio chamado numeros
+- Utilizar for para solicitar os 6 números
+- Converter cada valor digitado para int
+- Adicionar cada número no vetor
+- Utilizar outro for para verificar quais números são pares
+- Apresentar o vetor completo
+- Apresentar a quantidade de números pares
+
+Dica:
+Um número é par quando o resto da divisão por 2 é igual a 0.
+
+Exemplo:
+Digite um número: 4
+Digite um número: 7
+Digite um número: 10
+Digite um número: 3
+Digite um número: 8
+Digite um número: 1
+
+Saída esperada:
+Números digitados: [4, 7, 10, 3, 8, 1]
+Quantidade de números pares: 3
+
+
+
+--------------------------------------------------
+Ex.13 - Calculando média de notas
+--------------------------------------------------
+
+Função:
+exercicio13
+
+Objetivo:
+Solicitar 4 notas para o usuário, armazenar dentro de um vetor e calcular a média final.
+
+Regras:
+- Criar um vetor vazio chamado notas
+- Utilizar for para solicitar as 4 notas
+- Converter cada nota digitada para float
+- Adicionar cada nota no vetor
+- Utilizar outro for para somar as notas
+- Calcular a média
+- Apresentar o vetor completo
+- Apresentar a média final
+- Informar se o aluno foi aprovado ou reprovado
+
+Regra para aprovação:
+- Média maior ou igual a 7: aprovado
+- Média menor que 7: reprovado
+
+Exemplo:
+Digite uma nota: 8
+Digite uma nota: 7
+Digite uma nota: 6
+Digite uma nota: 9
+
+Saída esperada:
+Notas digitadas: [8.0, 7.0, 6.0, 9.0]
+Média final: 7.5
+Situação: Aprovado
+"""

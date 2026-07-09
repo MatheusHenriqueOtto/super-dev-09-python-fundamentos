@@ -1,0 +1,462 @@
+"""
+
+https://github.com/franciscosensaulas/super-dev-09-curso-python-fundamentos/blob/main/exemplo_03_requisicoes.py
+
+==================================================
+EXERCÍCIOS DE PYTHON - REQUISIÇÕES HTTP
+==================================================
+
+Arquivo:
+exercicios_requisicoes_empresa.py
+
+Orientações gerais:
+- Utilizar a biblioteca requests.
+- Criar uma função para cada exercício.
+- Utilizar exatamente o nome da função indicado.
+- Utilizar a variável url_base.
+- Apresentar o status code da resposta.
+- Quando possível, apresentar também o conteúdo da resposta.
+- Testar uma função por vez, chamando a função no final do arquivo.
+
+Código inicial:
+
+import requests
+
+url_base = "https://api.franciscosensaulas.com"
+
+
+
+==================================================
+PARTE 1 - REQUISIÇÕES GET
+==================================================
+
+
+--------------------------------------------------
+Ex.1 - Consultar todas as empresas
+--------------------------------------------------
+
+Função:
+consultar_empresas
+
+Objetivo:
+Fazer uma requisição GET para consultar todas as empresas cadastradas.
+
+Endpoint:
+GET /api/v1/empresa
+
+Regras:
+- Criar a variável url usando url_base
+- Utilizar requests.get
+- Apresentar o status code
+- Apresentar o texto da resposta
+
+Exemplo de URL:
+https://api.franciscosensaulas.com/api/v1/empresa
+
+Saída esperada:
+Status Code: 200
+Response: lista de empresas cadastradas
+
+
+
+--------------------------------------------------
+Ex.2 - Consultar uma empresa pelo ID
+--------------------------------------------------
+
+Função:
+consultar_empresa_por_id
+
+Objetivo:
+Fazer uma requisição GET para consultar uma empresa específica pelo ID.
+
+Endpoint:
+GET /api/v1/empresa/{id}
+
+Regras:
+- Criar uma variável chamada id
+- Montar a URL usando o id
+- Utilizar requests.get
+- Apresentar o status code
+- Apresentar o texto da resposta
+
+Exemplo:
+id = 1
+
+Exemplo de URL:
+https://api.franciscosensaulas.com/api/v1/empresa/1
+
+Saída esperada:
+Status Code: 200
+Response: dados da empresa encontrada
+
+Observação:
+Se o ID não existir, a API poderá retornar status code 404.
+
+
+
+--------------------------------------------------
+Ex.3 - Consultar todos os produtos da empresa
+--------------------------------------------------
+
+Função:
+consultar_produtos
+
+Objetivo:
+Fazer uma requisição GET para consultar todos os produtos cadastrados.
+
+Endpoint:
+GET /api/v1/empresa/produtos
+
+Regras:
+- Criar a variável url usando url_base
+- Utilizar requests.get
+- Apresentar o status code
+- Apresentar o texto da resposta
+
+Exemplo de URL:
+https://api.franciscosensaulas.com/api/v1/empresa/produtos
+
+Saída esperada:
+Status Code: 200
+Response: lista de produtos cadastrados
+
+
+
+--------------------------------------------------
+Ex.4 - Consultar um produto pelo ID
+--------------------------------------------------
+
+Função:
+consultar_produto_por_id
+
+Objetivo:
+Fazer uma requisição GET para consultar um produto específico pelo ID.
+
+Endpoint:
+GET /api/v1/empresa/produtos/{id}
+
+Regras:
+- Criar uma variável chamada id
+- Montar a URL usando o id
+- Utilizar requests.get
+- Apresentar o status code
+- Apresentar o texto da resposta
+
+Exemplo:
+id = 1
+
+Exemplo de URL:
+https://api.franciscosensaulas.com/api/v1/empresa/produtos/1
+
+Saída esperada:
+Status Code: 200
+Response: dados do produto encontrado
+
+Observação:
+Se o ID não existir, a API poderá retornar status code 404.
+
+
+
+==================================================
+PARTE 2 - REQUISIÇÕES POST
+==================================================
+
+
+--------------------------------------------------
+Ex.5 - Cadastrar uma empresa
+--------------------------------------------------
+
+Função:
+cadastrar_empresa
+
+Objetivo:
+Fazer uma requisição POST para cadastrar uma nova empresa.
+
+Endpoint:
+POST /api/v1/empresa
+
+Campos que devem ser enviados:
+- nome
+- cnpj
+
+Regras:
+- Criar um dicionário chamado empresa
+- Informar os campos nome e cnpj
+- Utilizar requests.post
+- Enviar o dicionário usando json=empresa
+- Apresentar o status code
+- Apresentar o texto da resposta
+
+Exemplo de objeto:
+empresa = {
+    "nome": "Empresa do Python",
+    "cnpj": "12345678000199"
+}
+
+Saída esperada:
+Status Code: 201
+Response: dados da empresa cadastrada
+
+
+
+--------------------------------------------------
+Ex.6 - Cadastrar um produto
+--------------------------------------------------
+
+Função:
+cadastrar_produto
+
+Objetivo:
+Fazer uma requisição POST para cadastrar um novo produto.
+
+Endpoint:
+POST /api/v1/empresa/produtos
+
+Campos que devem ser enviados:
+- nome
+- preco
+- categoria
+
+Regras:
+- Criar um dicionário chamado produto
+- Informar os campos nome, preco e categoria
+- Utilizar requests.post
+- Enviar o dicionário usando json=produto
+- Apresentar o status code
+- Apresentar o texto da resposta
+
+Exemplo de objeto:
+produto = {
+    "nome": "Notebook Gamer",
+    "preco": 4500.99,
+    "categoria": "Informática"
+}
+
+Saída esperada:
+Status Code: 201
+Response: dados do produto cadastrado
+
+
+
+==================================================
+PARTE 3 - REQUISIÇÕES PUT
+==================================================
+
+
+--------------------------------------------------
+Ex.7 - Editar uma empresa
+--------------------------------------------------
+
+Função:
+editar_empresa
+
+Objetivo:
+Fazer uma requisição PUT para editar uma empresa existente.
+
+Endpoint:
+PUT /api/v1/empresa/{id}
+
+Campos que devem ser enviados:
+- nome
+- cnpj
+
+Regras:
+- Criar uma variável chamada id
+- Montar a URL usando o id
+- Criar um dicionário chamado empresa
+- Informar os campos nome e cnpj
+- Utilizar requests.put
+- Enviar o dicionário usando json=empresa
+- Apresentar o status code
+
+Exemplo:
+id = 1
+
+empresa = {
+    "nome": "Empresa Editada pelo Python",
+    "cnpj": "98765432000188"
+}
+
+Saída esperada:
+Status Code: 204
+
+Observação:
+O status code 204 significa que a alteração foi realizada com sucesso,
+mas a API não retornou conteúdo no corpo da resposta.
+
+
+
+--------------------------------------------------
+Ex.8 - Editar um produto
+--------------------------------------------------
+
+Função:
+editar_produto
+
+Objetivo:
+Fazer uma requisição PUT para editar um produto existente.
+
+Endpoint:
+PUT /api/v1/empresa/produtos/{id}
+
+Campos que devem ser enviados:
+- nome
+- preco
+- categoria
+
+Regras:
+- Criar uma variável chamada id
+- Montar a URL usando o id
+- Criar um dicionário chamado produto
+- Informar os campos nome, preco e categoria
+- Utilizar requests.put
+- Enviar o dicionário usando json=produto
+- Apresentar o status code
+
+Exemplo:
+id = 1
+
+produto = {
+    "nome": "Mouse Gamer Editado",
+    "preco": 159.90,
+    "categoria": "Periféricos"
+}
+
+Saída esperada:
+Status Code: 204
+
+Observação:
+Se o ID não existir, a API poderá retornar status code 404.
+
+
+
+==================================================
+PARTE 4 - REQUISIÇÕES DELETE
+==================================================
+
+
+--------------------------------------------------
+Ex.9 - Apagar uma empresa
+--------------------------------------------------
+
+Função:
+apagar_empresa
+
+Objetivo:
+Fazer uma requisição DELETE para apagar uma empresa pelo ID.
+
+Endpoint:
+DELETE /api/v1/empresa/{id}
+
+Regras:
+- Criar uma variável chamada id
+- Montar a URL usando o id
+- Utilizar requests.delete
+- Apresentar o status code
+
+Exemplo:
+id = 1
+
+Exemplo de URL:
+https://api.franciscosensaulas.com/api/v1/empresa/1
+
+Saída esperada:
+Status Code: 204
+
+Observação:
+Cuidado ao apagar uma empresa.
+Utilize um ID criado por você durante os testes.
+
+
+
+--------------------------------------------------
+Ex.10 - Apagar um produto
+--------------------------------------------------
+
+Função:
+apagar_produto
+
+Objetivo:
+Fazer uma requisição DELETE para apagar um produto pelo ID.
+
+Endpoint:
+DELETE /api/v1/empresa/produtos/{id}
+
+Regras:
+- Criar uma variável chamada id
+- Montar a URL usando o id
+- Utilizar requests.delete
+- Apresentar o status code
+
+Exemplo:
+id = 1
+
+Exemplo de URL:
+https://api.franciscosensaulas.com/api/v1/empresa/produtos/1
+
+Saída esperada:
+Status Code: 204
+
+Observação:
+Cuidado ao apagar um produto.
+Utilize um ID criado por você durante os testes.
+
+
+
+==================================================
+DESAFIO FINAL - CRUD COMPLETO
+==================================================
+
+
+--------------------------------------------------
+Ex.11 - Fazer o CRUD completo de empresa
+--------------------------------------------------
+
+Função:
+crud_completo_empresa
+
+Objetivo:
+Criar uma sequência de requisições para testar o CRUD completo de empresa.
+
+A função deverá:
+1. Cadastrar uma empresa usando POST
+2. Consultar as empresas usando GET
+3. Editar uma empresa usando PUT
+4. Consultar a empresa editada usando GET por ID
+5. Apagar a empresa usando DELETE
+
+Regras:
+- Utilizar requests.post
+- Utilizar requests.get
+- Utilizar requests.put
+- Utilizar requests.delete
+- Apresentar o status code de cada requisição
+- Organizar os prints para ficar fácil de entender o que está acontecendo
+
+
+
+--------------------------------------------------
+Ex.12 - Fazer o CRUD completo de produto
+--------------------------------------------------
+
+Função:
+crud_completo_produto
+
+Objetivo:
+Criar uma sequência de requisições para testar o CRUD completo de produto.
+
+A função deverá:
+1. Cadastrar um produto usando POST
+2. Consultar os produtos usando GET
+3. Editar um produto usando PUT
+4. Consultar o produto editado usando GET por ID
+5. Apagar o produto usando DELETE
+
+Regras:
+- Utilizar requests.post
+- Utilizar requests.get
+- Utilizar requests.put
+- Utilizar requests.delete
+- Apresentar o status code de cada requisição
+- Organizar os prints para ficar fácil de entender o que está acontecendo
+"""
