@@ -1,0 +1,59 @@
+Lista de Exercícios — Dicionários em Python
+
+Crie um dicionário com nome, idade e curso de um aluno e imprima cada valor.
+
+Adicione a chave "salario": 3500 ao dicionário {"nome": "Ana", "cargo": "Analista"}.
+
+Remova a chave "cargo" do dicionário do exercício anterior.
+
+Verifique se a chave "nome" existe em um dicionário usando in.
+
+Some todos os valores do dicionário {"maçã": 2.5, "banana": 1.8, "uva": 5.0, "pera": 3.2}.
+
+Percorra um dicionário de preços e imprima cada item no formato "produto custa R$valor".
+
+Conte quantas vezes cada letra aparece na palavra "programacao".
+
+Inverta as chaves e valores do dicionário {"Brasil": "Brasília", "França": "Paris", "Japão": "Tóquio"}.
+
+Filtre, de uma lista de dicionários de pessoas, apenas as que têm idade maior que 18.
+
+Combine dois dicionários de estoque somando os valores quando a chave for igual.
+
+Crie, com dictionary comprehension, um dicionário dos números de 1 a 10 e seus quadrados.
+
+Agrupe uma lista de pessoas em "menor" e "maior" de idade usando um dicionário.
+
+Liste os produtos com quantidade em estoque maior que zero.
+
+Simule a venda de um produto diminuindo sua quantidade no estoque.
+
+Calcule o valor total do estoque (preço × quantidade de cada item).
+
+Marque um livro como emprestado, avisando se ele já estiver indisponível.
+
+Liste os títulos de livros disponíveis para empréstimo.
+
+Calcule a média de notas de cada aluno a partir de uma lista de notas por nome.
+
+Descubra o aluno com a maior média da turma.
+
+Separe os alunos em aprovados e reprovados (média ≥ 6).
+
+Calcule o total ganho por cada motorista a partir de uma lista de corridas.
+
+Descubra qual motorista fez mais corridas.
+
+Calcule o valor líquido pago a cada motorista descontando 20% de comissão.
+
+Calcule o peso total de itens carregados no inventário de um jogo.
+
+Avise se o peso total do inventário ultrapassa o limite de 8.
+
+Remova um item do inventário ao "usá-lo" (ex: poção de vida).
+
+Conte a frequência de cada palavra em um texto, ignorando maiúsculas e pontuação.
+
+Descubra a palavra mais frequente em um texto.
+
+Ordene um dicionário de frequência de palavras da mais para a menos frequente.
