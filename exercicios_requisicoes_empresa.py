@@ -127,11 +127,15 @@ def consultar_produto_id():
 
     produtos = resposta.json()
 
+    # for produto in produtos:
+    #     for chave, valor in produto.items():
+    #         if chave == "id":
+    #             if valor == id_selecionado:
+    #                 table.add_row(str(produto["id"]), produto["nome"], str(produto["preco"]), produto["categoria"])
     for produto in produtos:
-        for chave, valor in produto.items():
-            if chave == "id":
-                if valor == id_selecionado:
-                    table.add_row(str(produto["id"]), produto["nome"], str(produto["preco"]), produto["categoria"])
+        id = produto["id"]
+        if id == id_selecionado:
+            table.add_row(str(produto["id"]), produto["nome"], str(produto["preco"]), produto["categoria"])
 
     
     console.print(table)

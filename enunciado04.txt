@@ -1,0 +1,256 @@
+--------------------------------------------------
+Ex.7 - Filtrando dados em uma lista de dicionários
+--------------------------------------------------
+
+Função principal:
+exercicio07
+
+Objetivo:
+Criar uma lista de dicionários chamada produtos e aprender a filtrar dados dessa lista utilizando funções separadas.
+
+Neste exercício, você deverá criar várias funções.
+Cada função será responsável por uma parte do processamento dos dados.
+
+Tema:
+Produtos de uma loja
+
+
+==================================================
+DADOS QUE DEVEM SER CRIADOS
+==================================================
+
+Dentro da função exercicio07, criar uma lista chamada produtos.
+
+A lista produtos deverá ter 5 dicionários.
+
+Cada dicionário deverá representar um produto com as seguintes chaves:
+- 'id'
+- 'nome'
+- 'categoria'
+- 'preco'
+- 'estoque'
+
+Exemplo de estrutura usando outro tema:
+
+filmes = [
+    {
+        "id": 1,
+        "titulo": "Homem-Aranha",
+        "genero": "Ação",
+        "ano": 2002,
+        "nota": 8.5
+    },
+    {
+        "id": 2,
+        "titulo": "Toy Story",
+        "genero": "Animação",
+        "ano": 1995,
+        "nota": 9.0
+    }
+]
+
+Observação:
+O exemplo acima mostra apenas a estrutura de uma lista com dicionários.
+No exercício, você deverá criar uma lista de produtos usando as chaves solicitadas.
+
+
+==================================================
+FUNÇÃO 1 - Obter nomes dos produtos
+==================================================
+
+Criar uma função chamada:
+obter_nomes_produtos
+
+Parâmetro:
+produtos
+
+Objetivo:
+Percorrer a lista de produtos e retornar uma lista contendo somente os nomes dos produtos.
+
+Regras:
+- Criar uma lista vazia chamada nomes
+- Utilizar for para percorrer a lista produtos
+- Para cada produto, pegar o valor da chave 'nome'
+- Adicionar o nome na lista nomes
+- Retornar a lista nomes
+
+Exemplo de retorno:
+["Mouse", "Teclado", "Monitor"]
+
+
+==================================================
+FUNÇÃO 2 - Filtrar produtos com estoque baixo
+==================================================
+
+Criar uma função chamada:
+obter_produtos_com_estoque_baixo
+
+Parâmetro:
+produtos
+
+Objetivo:
+Retornar uma lista com os nomes dos produtos que possuem estoque menor que 10.
+
+Regras:
+- Criar uma lista vazia chamada produtos_estoque_baixo
+- Utilizar for para percorrer a lista produtos
+- Para cada produto, verificar o valor da chave 'estoque'
+- Se o estoque for menor que 10, adicionar o nome do produto na lista produtos_estoque_baixo
+- Retornar a lista produtos_estoque_baixo
+
+Exemplo de retorno:
+["Mouse", "Webcam"]
+
+
+==================================================
+FUNÇÃO 3 - Filtrar produtos por categoria
+==================================================
+
+Criar uma função chamada:
+obter_produtos_por_categoria
+
+Parâmetros:
+produtos
+categoria_pesquisada
+
+Objetivo:
+Retornar uma lista com os nomes dos produtos que pertencem à categoria informada.
+
+Regras:
+- Criar uma lista vazia chamada produtos_filtrados
+- Utilizar for para percorrer a lista produtos
+- Para cada produto, verificar o valor da chave 'categoria'
+- Se a categoria do produto for igual à categoria_pesquisada, adicionar o nome do produto na lista produtos_filtrados
+- Retornar a lista produtos_filtrados
+
+Exemplo:
+categoria_pesquisada = "Informática"
+
+Exemplo de retorno:
+["Mouse", "Teclado", "Monitor"]
+
+
+==================================================
+FUNÇÃO 4 - Filtrar produtos acima de um preço
+==================================================
+
+Criar uma função chamada:
+obter_produtos_acima_do_preco
+
+Parâmetros:
+produtos
+preco_minimo
+
+Objetivo:
+Retornar uma lista com os nomes dos produtos que possuem preço maior que o preço mínimo informado.
+
+Regras:
+- Criar uma lista vazia chamada produtos_caros
+- Utilizar for para percorrer a lista produtos
+- Para cada produto, verificar o valor da chave 'preco'
+- Se o preço do produto for maior que preco_minimo, adicionar o nome do produto na lista produtos_caros
+- Retornar a lista produtos_caros
+
+Exemplo:
+preco_minimo = 100
+
+Exemplo de retorno:
+["Teclado", "Monitor"]
+
+
+==================================================
+FUNÇÃO 5 - Somar o valor total do estoque
+==================================================
+
+Criar uma função chamada:
+somar_valor_total_estoque
+
+Parâmetro:
+produtos
+
+Objetivo:
+Calcular o valor total em estoque da loja.
+
+Para calcular o valor total de cada produto:
+preco * estoque
+
+Regras:
+- Criar uma variável chamada total com o valor 0
+- Utilizar for para percorrer a lista produtos
+- Para cada produto, pegar o preço e o estoque
+- Multiplicar preço por estoque
+- Somar o resultado na variável total
+- Retornar o total
+
+Exemplo:
+Produto:
+preco = 50
+estoque = 10
+
+Valor em estoque:
+50 * 10 = 500
+
+
+==================================================
+FUNÇÃO PRINCIPAL - exercicio07
+==================================================
+
+Criar uma função chamada:
+exercicio07
+
+Objetivo:
+Criar a lista de produtos, chamar as funções criadas e apresentar os resultados.
+
+Dentro da função exercicio07:
+
+1. Criar a lista produtos com 5 produtos
+
+2. Chamar a função obter_nomes_produtos
+
+3. Chamar a função obter_produtos_com_estoque_baixo
+
+4. Chamar a função obter_produtos_por_categoria
+   Exemplo de categoria pesquisada:
+   "Informática"
+
+5. Chamar a função obter_produtos_acima_do_preco
+   Exemplo de preço mínimo:
+   100
+
+6. Chamar a função somar_valor_total_estoque
+
+7. Apresentar todos os resultados com print
+
+
+==================================================
+EXEMPLO DE SAÍDA ESPERADA
+==================================================
+
+Nomes dos produtos:
+["Mouse", "Teclado", "Monitor", "Cadeira", "Webcam"]
+
+Produtos com estoque baixo:
+["Mouse", "Webcam"]
+
+Produtos da categoria Informática:
+["Mouse", "Teclado", "Monitor", "Webcam"]
+
+Produtos acima de R$ 100:
+["Teclado", "Monitor", "Cadeira"]
+
+Valor total em estoque:
+12500.5
+
+
+==================================================
+REGRAS GERAIS
+==================================================
+
+- Utilizar lista
+- Utilizar dicionários dentro da lista
+- Utilizar for
+- Utilizar funções separadas
+- Não utilizar while
+- Não fazer todo o código dentro de uma única função
+- Cada função deve ter apenas uma responsabilidade
+- A função exercicio07 deve chamar as outras funções
