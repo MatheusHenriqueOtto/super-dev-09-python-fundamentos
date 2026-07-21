@@ -83,7 +83,7 @@ class Triangulo:
 
 
     def apresentar_dados(self):
-        print(f"\nBase: {self.base}\nAltura: {self.altura}\nPrimeiro lado: {self.lado_1}\nSegundo lado: {self.lado_2}\nTerceiro lado: {self.lado_3}\nArea: {self.area}")
+        print(f"\nBase: {self.base}\nAltura: {self.altura}\nPrimeiro lado: {self.lado_1}\nSegundo lado: {self.lado_2}\nTerceiro lado: {self.lado_3}\nTipo: {self.tipo}\nArea: {self.area}m²")
 
 
     def calcular_area(self):
@@ -127,5 +127,72 @@ class Triangulo:
             return True
         else:
             return False
+        
+    def calcular_area(self):
+        area = (self.base * self.altura)/ 2
+        return area
 
+def exemplo_triangulo():
+    robson = Triangulo(10, 15, 20, 20, 20)
+    agatha = Triangulo(21, 10, 20, 20, 15)
+
+    robson.apresentar_dados()
+    print("-" * 25)
+    agatha.apresentar_dados()
+
+
+
+class Quadrado:
+    def __init__(self, lado: float):
+        self.lado = lado
+        self.area = self.calcular_area()
+        self.perimetro = self.calcular_perimetro()
+
+    def apresentar_quadrado(self):
+        print(f"Lado do quadrado: {self.lado}\nArea do quadrado: {self.area}\nPerimetro do quadrado: {self.perimetro}")
     
+    def calcular_area(self):
+        area = self.lado * self.lado
+        return area
+    
+    def calcular_perimetro(self):
+        perimetro = self.lado * 4
+        return perimetro
+
+
+def exemplo_quadrado():
+    quadrado = Quadrado(15)
+    quadradao = Quadrado(30)
+
+    quadrado.apresentar_quadrado()
+    quadradao.apresentar_quadrado()
+
+
+
+class Retangulo:
+    def __init__(self, base: float, altura: float):
+        self.base = base
+        self.altura = altura
+        self.area = self.calcular_area()
+        self.perimetro = self.calacular_perimetro()
+
+
+    def calcular_area(self):
+        area = self.base * self.altura
+        return area
+    
+    def calacular_perimetro(self):
+        perimetro = self.base + self.base + self.altura + self.altura
+        return perimetro
+    
+    def apresentar_retangulo(self):
+        print(f"Base: {self.base}\nAltura: {self.altura}\nArea: {self.area}\nPerimetro: {self.perimetro}\n{"-"*20}")
+
+
+def exemplo_retangulo():
+    retangulo = Retangulo(20, 10)
+    retangulao = Retangulo(40, 20)
+
+    retangulo.apresentar_retangulo()
+    retangulao.apresentar_retangulo()
+

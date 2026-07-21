@@ -1,0 +1,393 @@
+"""
+==================================================
+EXERCÍCIOS DE PYTHON - CLASSES
+==================================================
+
+Arquivo:
+exercicios_classes.py
+
+Orientações gerais:
+- Criar uma classe para cada exercício.
+- Utilizar construtor __init__.
+- Criar funções dentro da classe.
+- Instanciar objetos.
+- Chamar as funções dos objetos.
+- Testar um exercício por vez.
+- Não copiar os exemplos, criar seus próprios dados.
+
+
+
+--------------------------------------------------
+Ex.1 - Classe Tenis
+--------------------------------------------------
+
+Classe:
+Tenis
+
+Objetivo:
+Criar uma classe para representar um tênis.
+
+Primeira parte:
+
+Criar uma classe chamada Tenis.
+
+O construtor deve receber os seguintes parâmetros:
+- modelo
+- tamanho
+
+Criar uma função chamada apresentar_dados.
+
+A função apresentar_dados deve apresentar:
+- Modelo do tênis
+- Tamanho do tênis
+
+Depois:
+
+1. Instanciar 3 objetos da classe Tenis
+2. Preencher o modelo e o tamanho de cada tênis
+3. Chamar a função apresentar_dados para cada objeto
+
+
+Segunda parte:
+
+Modificar o construtor da classe Tenis.
+
+Adicionar os seguintes parâmetros:
+- marca
+- valor
+
+Agora o construtor deve receber:
+- modelo
+- tamanho
+- marca
+- valor
+
+Modificar a função apresentar_dados para apresentar:
+- Modelo
+- Tamanho
+- Marca
+- Valor
+
+Depois:
+
+1. Modificar os 3 objetos criados anteriormente
+2. Informar modelo, tamanho, marca e valor no construtor
+3. Chamar novamente a função apresentar_dados para cada objeto
+
+--------------------------------------------------
+Ex.2 - Classe Aluno
+--------------------------------------------------
+
+Classe:
+Aluno
+
+Objetivo:
+Criar uma classe para representar um aluno e calcular sua média.
+
+Criar uma classe chamada Aluno.
+
+O construtor deve receber os seguintes parâmetros:
+- nome
+- nota1
+- nota2
+
+Criar uma função chamada apresentar_dados.
+
+A função apresentar_dados deve apresentar:
+- Nome do aluno
+- Nota 1
+- Nota 2
+
+Criar uma função chamada calcular_media.
+
+A função calcular_media deve:
+- Somar nota1 + nota2
+- Dividir o resultado por 2
+- Apresentar a média final
+
+Criar uma função chamada apresentar_situacao.
+
+A função apresentar_situacao deve:
+- Calcular a média
+- Se a média for maior ou igual a 7, apresentar "Aprovado"
+- Se a média for menor que 7, apresentar "Reprovado"
+
+Depois:
+
+1. Instanciar 3 objetos da classe Aluno
+2. Chamar a função apresentar_dados para cada aluno
+3. Chamar a função calcular_media para cada aluno
+4. Chamar a função apresentar_situacao para cada aluno
+
+
+--------------------------------------------------
+Ex.3 - Classes de Formas Geométricas
+--------------------------------------------------
+
+    Objetivo:
+    Criar classes separadas para representar diferentes formas geométricas.
+
+    Neste exercício, você deverá criar uma classe para cada tipo de forma geométrica.
+
+    Classes que devem ser criadas:
+    - Triangulo
+    - Quadrado
+    - Retangulo
+    - Circulo
+
+    Cada classe deverá ter seus próprios atributos e funções.
+
+    Importante:
+    As fórmulas para calcular área, perímetro e circunferência devem ser pesquisadas pelo aluno.
+    O enunciado não informa as fórmulas prontas.
+
+    ==================================================
+    REGRAS GERAIS
+    ==================================================
+
+    - Criar uma classe separada para cada forma geométrica
+    - Utilizar construtor __init__ em todas as classes
+    - Utilizar self para acessar os atributos
+    - Criar funções dentro das classes
+    - Instanciar objetos de cada classe
+    - Chamar as funções usando os objetos criados
+    - Não utilizar lista
+    - Não utilizar for
+    - Não utilizar while
+    - Não utilizar input
+    - Os dados devem ser preenchidos diretamente no código
+    - As fórmulas devem ser pesquisadas
+    - Testar uma classe por vez
+
+
+    ==================================================
+    PARTE 1 - Classe Triangulo
+    ==================================================
+
+    Classe:
+    Triangulo
+
+    Objetivo:
+    Criar uma classe para representar um triângulo.
+
+    O construtor deve receber os seguintes parâmetros:
+    - base
+    - altura
+    - lado1
+    - lado2
+    - lado3
+
+    Criar uma função chamada apresentar_dados.
+
+    A função apresentar_dados deve apresentar:
+    - Base
+    - Altura
+    - Lado 1
+    - Lado 2
+    - Lado 3
+
+    Criar uma função chamada calcular_area.
+
+    A função calcular_area deve:
+    - Pesquisar a fórmula da área do triângulo
+    - Calcular a área utilizando base e altura
+    - Apresentar o resultado da área
+
+    Criar uma função chamada verificar_equilatero.
+
+    A função verificar_equilatero deve:
+    - Pesquisar o que é um triângulo equilátero
+    - Verificar se os lados do triângulo formam um triângulo equilátero
+    - Apresentar uma mensagem informando o resultado
+
+    Mensagens possíveis:
+    Triângulo equilátero
+    Triângulo não equilátero
+
+    Depois:
+
+    1. Instanciar 2 objetos da classe Triangulo
+    2. Chamar a função apresentar_dados para cada triângulo
+    3. Chamar a função calcular_area para cada triângulo
+    4. Chamar a função verificar_equilatero para cada triângulo
+
+
+
+    ==================================================
+    PARTE 2 - Classe Quadrado
+    ==================================================
+
+    Classe:
+    Quadrado
+
+    Objetivo:
+    Criar uma classe para representar um quadrado.
+
+    O construtor deve receber o seguinte parâmetro:
+    - lado
+
+    Criar uma função chamada apresentar_dados.
+
+    A função apresentar_dados deve apresentar:
+    - Lado do quadrado
+
+    Criar uma função chamada calcular_area.
+
+    A função calcular_area deve:
+    - Pesquisar a fórmula da área do quadrado
+    - Calcular a área do quadrado
+    - Apresentar o resultado da área
+
+    Criar uma função chamada calcular_perimetro.
+
+    A função calcular_perimetro deve:
+    - Pesquisar a fórmula do perímetro do quadrado
+    - Calcular o perímetro do quadrado
+    - Apresentar o resultado do perímetro
+
+    Depois:
+
+    1. Instanciar 2 objetos da classe Quadrado
+    2. Chamar a função apresentar_dados para cada quadrado
+    3. Chamar a função calcular_area para cada quadrado
+    4. Chamar a função calcular_perimetro para cada quadrado
+
+
+
+    ==================================================
+    PARTE 3 - Classe Retangulo
+    ==================================================
+
+    Classe:
+    Retangulo
+
+    Objetivo:
+    Criar uma classe para representar um retângulo.
+
+    O construtor deve receber os seguintes parâmetros:
+    - base
+    - altura
+
+    Criar uma função chamada apresentar_dados.
+
+    A função apresentar_dados deve apresentar:
+    - Base
+    - Altura
+
+    Criar uma função chamada calcular_area.
+
+    A função calcular_area deve:
+    - Pesquisar a fórmula da área do retângulo
+    - Calcular a área do retângulo
+    - Apresentar o resultado da área
+
+    Criar uma função chamada calcular_perimetro.
+
+    A função calcular_perimetro deve:
+    - Pesquisar a fórmula do perímetro do retângulo
+    - Calcular o perímetro do retângulo
+    - Apresentar o resultado do perímetro
+
+    Depois:
+
+    1. Instanciar 2 objetos da classe Retangulo
+    2. Chamar a função apresentar_dados para cada retângulo
+    3. Chamar a função calcular_area para cada retângulo
+    4. Chamar a função calcular_perimetro para cada retângulo
+
+
+
+    ==================================================
+    PARTE 4 - Classe Circulo
+    ==================================================
+
+    Classe:
+    Circulo
+
+    Objetivo:
+    Criar uma classe para representar um círculo.
+
+    O construtor deve receber o seguinte parâmetro:
+    - raio
+
+    Criar uma função chamada apresentar_dados.
+
+    A função apresentar_dados deve apresentar:
+    - Raio do círculo
+
+    Criar uma função chamada calcular_area.
+
+    A função calcular_area deve:
+    - Pesquisar a fórmula da área do círculo
+    - Calcular a área do círculo
+    - Apresentar o resultado da área
+
+    Criar uma função chamada calcular_circunferencia.
+
+    A função calcular_circunferencia deve:
+    - Pesquisar a fórmula da circunferência do círculo
+    - Calcular a circunferência
+    - Apresentar o resultado da circunferência
+
+    Depois:
+
+    1. Instanciar 2 objetos da classe Circulo
+    2. Chamar a função apresentar_dados para cada círculo
+    3. Chamar a função calcular_area para cada círculo
+    4. Chamar a função calcular_circunferencia para cada círculo
+
+
+--------------------------------------------------
+Ex.4 - Classe Personagem
+--------------------------------------------------
+
+Classe:
+Personagem
+
+Objetivo:
+Criar uma classe para representar um personagem de jogo.
+
+Criar uma classe chamada Personagem.
+
+O construtor deve receber os seguintes parâmetros:
+- nome
+- vida
+- ataque
+
+Criar uma função chamada apresentar_dados.
+
+A função apresentar_dados deve apresentar:
+- Nome do personagem
+- Vida
+- Ataque
+
+Criar uma função chamada atacar.
+
+A função atacar deve receber um parâmetro chamado outro_personagem.
+
+A função deve:
+- Diminuir da vida do outro personagem o valor do ataque do personagem atual
+- Apresentar uma mensagem informando quem atacou quem
+- Apresentar a vida atual do personagem atacado
+
+Depois:
+
+1. Instanciar 2 objetos da classe Personagem
+2. Apresentar os dados dos dois personagens
+3. Fazer o primeiro personagem atacar o segundo
+4. Fazer o segundo personagem atacar o primeiro
+5. Apresentar novamente os dados dos dois personagens
+
+
+Exemplo:
+Personagem 1:
+Nome: Guerreiro
+Vida: 100
+Ataque: 20
+
+Personagem 2:
+Nome: Mago
+Vida: 80
+Ataque: 30
+
+"""
