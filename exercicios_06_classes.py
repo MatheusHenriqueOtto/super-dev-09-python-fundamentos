@@ -78,7 +78,7 @@ class Triangulo:
         self.lado_1 = lado_1
         self.lado_2 = lado_2
         self.lado_3 = lado_3
-        self.area = self.calcular_area()
+        self.area = self.calcular_area_triangulo()
         self.tipo = self.verificar_tipo()
 
 
@@ -86,7 +86,7 @@ class Triangulo:
         print(f"\nBase: {self.base}\nAltura: {self.altura}\nPrimeiro lado: {self.lado_1}\nSegundo lado: {self.lado_2}\nTerceiro lado: {self.lado_3}\nTipo: {self.tipo}\nArea: {self.area}m²")
 
 
-    def calcular_area(self):
+    def calcular_area_triangulo(self) -> float:
         area = (self.base * self.altura)/2
         return area
    
@@ -145,13 +145,13 @@ def exemplo_triangulo():
 class Quadrado:
     def __init__(self, lado: float):
         self.lado = lado
-        self.area = self.calcular_area()
+        self.area = self.calcular_area_quadrado()
         self.perimetro = self.calcular_perimetro()
 
     def apresentar_quadrado(self):
         print(f"Lado do quadrado: {self.lado}\nArea do quadrado: {self.area}\nPerimetro do quadrado: {self.perimetro}")
     
-    def calcular_area(self):
+    def calcular_area_quadrado(self):
         area = self.lado * self.lado
         return area
     
@@ -174,14 +174,14 @@ class Retangulo:
         self.base = base
         self.altura = altura
         self.area = self.calcular_area()
-        self.perimetro = self.calacular_perimetro()
+        self.perimetro = self.calcular_perimetro()
 
 
     def calcular_area(self):
         area = self.base * self.altura
         return area
     
-    def calacular_perimetro(self):
+    def calcular_perimetro(self):
         perimetro = self.base + self.base + self.altura + self.altura
         return perimetro
     

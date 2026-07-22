@@ -1,0 +1,160 @@
+==============================================================================
+                    EXERCÍCIOS DE PYTHON - POO
+==============================================================================
+Arquivo sugerido: exercicios_poo.txt
+Objetivo: Praticar Composição e Herança de Objetos.
+
+REGRAS GERAIS:
+- Criar classes com construtor __init__ e utilizar self.
+- Instanciar objetos com dados informados diretamente no código.
+- Não utilizar listas, loops (for/while) ou input.
+
+
+==============================================================================
+                       PARTE 1: COMPOSIÇÃO DE OBJETOS
+==============================================================================
+
+------------------------------------------------------------------------------
+Ex.1 - Classes Autor e Livro
+------------------------------------------------------------------------------
+PARTE 1 - Classe Autor
+Atributos: nome, nacionalidade, ano_nascimento
+Métodos:
+- apresentar_dados(): Exibe nome, nacionalidade e ano de nascimento.
+- obter_descricao(): Retorna string no formato "Nome - Nacionalidade".
+
+PARTE 2 - Classe Livro
+Atributos: titulo, quantidade_paginas, ano_publicacao, autor (Objeto Autor)
+Métodos:
+- apresentar_dados(): Exibe titulo, páginas, ano e a descrição do autor 
+  (chamando autor.obter_descricao()).
+
+EXECUÇÃO EX.1:
+1. Criar 2 objetos Autor.
+2. Criar 2 objetos Livro passando um Autor para cada.
+3. Executar apresentar_dados() de todos os autores e livros.
+
+
+------------------------------------------------------------------------------
+Ex.2 - Classes Endereco e Pessoa
+------------------------------------------------------------------------------
+PARTE 1 - Classe Endereco
+Atributos: rua, numero, bairro, cidade, estado
+Métodos:
+- apresentar_dados(): Exibe todos os dados do endereço.
+- obter_endereco_completo(): Retorna string formatada do endereço.
+
+PARTE 2 - Classe Pessoa
+Atributos: nome, idade, telefone, endereco (Objeto Endereco)
+Métodos:
+- apresentar_dados(): Exibe nome, idade, telefone e endereço completo 
+  (chamando endereco.obter_endereco_completo()).
+- verificar_maioridade(): Exibe se é maior de idade (>= 18) ou menor.
+
+EXECUÇÃO EX.2:
+1. Criar 2 objetos Endereco.
+2. Criar 2 objetos Pessoa passando um Endereco para cada.
+3. Executar apresentar_dados() de todos os endereços e pessoas.
+4. Executar verificar_maioridade() de todas as pessoas.
+
+
+------------------------------------------------------------------------------
+Ex.3 - Classes Cliente e Pedido
+------------------------------------------------------------------------------
+PARTE 1 - Classe Cliente
+Atributos: nome, cpf, email
+Métodos:
+- apresentar_dados(): Exibe nome, CPF e e-mail.
+- obter_identificacao(): Retorna string no formato "Nome - CPF: XXX".
+
+PARTE 2 - Classe Pedido
+Atributos: numero, produto, quantidade, valor_unitario, cliente (Objeto Cliente)
+Métodos:
+- apresentar_dados(): Exibe número, produto, quantidade, valor unitário e a 
+  identificação do cliente (chamando cliente.obter_identificacao()).
+- calcular_total(): Retorna a multiplicação da quantidade pelo valor unitário.
+- apresentar_total(): Exibe o valor total do pedido.
+
+EXECUÇÃO EX.3:
+1. Criar 2 objetos Cliente.
+2. Criar 2 objetos Pedido (1 produto por pedido) passando um Cliente para cada.
+3. Executar apresentar_dados() de todos os clientes e pedidos.
+4. Executar apresentar_total() de todos os pedidos.
+
+
+------------------------------------------------------------------------------
+Ex.4 - Classes Professor e Curso
+------------------------------------------------------------------------------
+PARTE 1 - Classe Professor
+Atributos: nome, especialidade, tempo_experiencia (em anos)
+Métodos:
+- apresentar_dados(): Exibe nome, especialidade e tempo de experiência.
+- obter_apresentacao(): Retorna string no formato "Nome - Especialista em X".
+
+PARTE 2 - Classe Curso
+Atributos: nome, carga_horaria, quantidade_alunos, professor (Objeto Professor)
+Métodos:
+- apresentar_dados(): Exibe nome, carga horária, alunos e apresentação 
+  do professor (chamando professor.obter_apresentacao()).
+- verificar_duracao(): Exibe se é "curta duração" (< 40h) ou "longa duração".
+
+EXECUÇÃO EX.4:
+1. Criar 2 objetos Professor.
+2. Criar 2 objetos Curso passando um Professor para cada.
+3. Executar apresentar_dados() de todos os professores e cursos.
+4. Executar verificar_duracao() de todos os cursos.
+
+
+==============================================================================
+                                PARTE 2
+==============================================================================
+    ██████╗ ██████╗ ███████╗ ██████╗██████╗ ██╗ ██████╗██████╗ ███████╗
+    ██╔════╝██╔═══██╗██╔════╝██╔════╝██╔══██╗██║██╔════╝██╔══██╗██╔════╝
+    ██║     ██║   ██║███████╗██║     ██████╔╝██║██║     ██║  ██║███████╗
+    ██║     ██║   ██║╚════██║██║     ██╔══██╗██║██║     ██║  ██║╚════██║
+    ╚██████╗╚██████╔╝███████║╚██████╗██║  ██║██║╚██████╗██████╔╝███████║
+     ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝ ╚═════╝╚═════╝ ╚══════╝
+==============================================================================
+                   EXERCÍCIOS DE PYTHON - HERANÇA DE OBJETOS
+==============================================================================
+
+Conceito:
+Na herança, uma subclasse (classe filha) reutiliza atributos e métodos da 
+superclasse (classe pai) utilizando o super().__init__().
+
+
+------------------------------------------------------------------------------
+Ex.5 - Classes Veiculo e Carro (Herança Simples)
+------------------------------------------------------------------------------
+PARTE 1 - Classe Pai: Veiculo
+Atributos: marca, modelo, ano
+Métodos:
+- apresentar_dados(): Exibe marca, modelo e ano do veículo.
+
+PARTE 2 - Classe Filha: Carro (Herda de Veiculo)
+Atributos adicionais: quantidade_portas
+Métodos:
+- Sobrescrever apresentar_dados() para incluir a quantidade de portas.
+
+EXECUÇÃO EX.5:
+1. Instanciar 2 objetos da classe Carro.
+2. Chamar apresentar_dados() de ambos os carros.
+
+
+------------------------------------------------------------------------------
+Ex.6 - Classes Funcionario e Gerente (Sobrescrita e Regra de Negócio)
+------------------------------------------------------------------------------
+PARTE 1 - Classe Pai: Funcionario
+Atributos: nome, cpf, salario_base
+Métodos:
+- calcular_salario(): Retorna o salario_base.
+- apresentar_dados(): Exibe nome, CPF e o salário final.
+
+PARTE 2 - Classe Filha: Gerente (Herda de Funcionario)
+Atributos adicionais: bonus
+Métodos:
+- Sobrescrever calcular_salario(): Retorna salario_base + bonus.
+
+EXECUÇÃO EX.6:
+1. Instanciar 1 Funcionario comum e 1 Gerente.
+2. Chamar apresentar_dados() de ambos para comparar os salários calculados.
