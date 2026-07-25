@@ -24,3 +24,5 @@ print(gato.fazer_som())      # Miau!
 
 # 4. Isso aqui vai DAR ERRO, pois Animal é só o molde:
 animal = Animal()
+
+
