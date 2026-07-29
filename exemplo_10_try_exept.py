@@ -25,10 +25,34 @@ def exemlo_com_tratamento_conversao():
     print("Acabou!!!!!!!!!!!!!!!!!!!")
 
 
+def exemplo_multiplos_tratamento():
+    numero1_digitado = "2"
+    numero2_digitado = "4"
 
-#pont de entrada da aplicação, deve ter um unico da aplicação inteira
+    try:
+        resultado: int = int(numero1_digitado)/int(numero2_digitado)
+        print("Resultado", resultado)
+    except ZeroDivisionError:
+        print("Não é possivel dividir um numero por zero")
+    except ValueError:
+        print("Os numeros não são validos")
+
+    print("Obrigado por usar o sistema") 
+
+def exemplo_mensagem_erro():
+    try:
+        aluno = {"nome": "Pedro", "nota1": 9.44}
+        media_aluno = aluno["media"]
+        print(media_aluno)
+    except KeyError as erro: # 'as' serve para pegar a variavel do erro que ocorreu
+        print("Mensagem de erro tentar acessar a chave: ", erro)
+
+    print("Deu boa!!!!!!!!!!!!!!!!!")
+
+    
+#ponto de entrada da aplicação, deve ter um unico da aplicação inteira
 if __name__ == "__main__":
 #exemplo_sem_tatamento()
 #exemplo_com_tratamento()
-    exemlo_com_tratamento_conversao()
-
+#exemlo_com_tratamento_conversao()
+    exemplo_multiplos_tratamento()
